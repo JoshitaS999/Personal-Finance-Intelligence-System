@@ -1,9 +1,9 @@
 
-# Personal Finance System — Stage 3
+# Personal Finance System — Stage 1
 
 Flask + SQLite personal finance application with authentication.
 
-## Stage 3 features
+## Stage 1 features
 
 - User registration
 - User login
@@ -49,9 +49,9 @@ For real deployment, change `app.secret_key` to a long random secret stored in a
 The application automatically adds the authentication fields to an existing Stage 2 database where possible.
 
 
-## Stage 5 — Dashboard
+## Stage 2 — Dashboard
 
-Stage 5 adds:
+Stage 2 adds:
 - Total Income
 - Total Expenses
 - Balance
@@ -63,7 +63,7 @@ Stage 5 adds:
 The dashboard calculations are user-specific.
 
 
-## Stage 5 — Budget Management
+## Stage 3 — Budget Management
 - Create or update monthly budgets by category
 - Track current-month spending against each budget
 - Show spending amount, budget amount, remaining amount, and percentage
@@ -71,11 +71,11 @@ The dashboard calculations are user-specific.
 - Budgets remain user-specific
 
 
-## Stage 6 — Financial Intelligence
+## Stage 4 — Financial Intelligence
 Open **Financial Intelligence** from the navigation after logging in. It compares current and previous month expenses, detects similar expenses repeated across different months, and flags unusually high transactions compared with other transactions in the same category. Detection uses your own transaction history and requires enough data.
 
 
-## Stage 7 — Machine Learning
+## Stage 5 — Machine Learning
 
 Install the updated dependencies with `pip install -r requirements.txt`. Start the app with `python app.py` and open **Machine Learning** from the sidebar.
 
@@ -86,7 +86,7 @@ Install the updated dependencies with `pip install -r requirements.txt`. Start t
 Models are trained from the user's own SQLite transaction history when the page is opened; no transaction data is sent to an external service. Results are experimental and should be treated as suggestions, not financial advice.
 
 
-## Stage 7 — Dataset integration
+## Stage 6 — Dataset integration
 
 The `datasets/personal_expense_dataset.csv` file contains synthetic example transactions for five fictional users. It is included as **training/demo data**, not imported into `finance.db`. The category model trains on the sample descriptions plus the currently signed-in user's categorized expense descriptions. Sample categories not supported by the app are mapped to `Other`. Monthly forecasting and Isolation Forest anomaly detection use only the signed-in user's own SQLite transactions.
 
